@@ -1,23 +1,22 @@
 add_newline = false
-format = "$time$directory$git_branch$git_state$git_status\u03bb "
+format = "$time$directory$git_branch$git_state$git_status$character "
 
 [character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red) "
+success_symbol = "[\u03bb](bold cyan)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[\u03bb](bold red) "
 
 [git_status]
 format = '(\[$all_status$ahead_behind\] )'
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
+conflicted = "[c](bold red)"
+ahead = "[a](blue)"
+behind = "[b](yellow)"
 up_to_date = "[✓](bold green)"
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
+untracked = "[✗](bold red)"
+stashed = "[s](yellow)"
+modified = "[✗](bold red)"
 staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+renamed = "[r](bold yellow)"
+deleted = "[d](bold red)"
 
 [git_branch]
 symbol = ""
