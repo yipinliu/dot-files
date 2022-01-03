@@ -1,0 +1,27 @@
+add_newline = false
+format = "$time$directory$git_branch$git_state$git_status\u03bb "
+
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[✗](bold red) "
+
+[git_status]
+format = '(\[$all_status$ahead_behind\] )'
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+up_to_date = "[✓](bold green)"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[git_branch]
+symbol = ""
+
+[time]
+disabled = false
+format = "[$time]($style) "
